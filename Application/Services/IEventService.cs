@@ -1,4 +1,10 @@
-﻿namespace Application.Services;
+﻿using Application.Models;
 
-public interface IEventService { 
+namespace Application.Services;
+
+public interface IEventService
+{
+    Task<EventResult> CreateEventAsync(CreateEventRequest request);
+    Task<EventResult<IEnumerable<Event>>> GetEventsAsync();
+    Task<EventResult<Event?>> GetEventAsync(string eventId);
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Persistence.Entities;
 
@@ -14,6 +15,7 @@ public class PackageEntity
 
     public string? Placement { get; set; }
 
+    [Column(TypeName = "decimal(18,2)")]
     public decimal? Price { get; set; }
 
     public string? Currency { get; set; }

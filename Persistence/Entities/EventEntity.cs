@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Persistence.Entities;
 
@@ -9,8 +10,9 @@ public class EventEntity
     public string? Image { get; set; }
     public string? Title { get; set; }
 
-    public DateTime Date { get; set; }
-    public DateTime Time { get; set; }
+    [Column(TypeName = "datetime2")]
+    public DateTime EventDate { get; set; }
+
 
     public string? Location { get; set; }
 

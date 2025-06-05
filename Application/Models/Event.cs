@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Application.Models
+namespace Application.Models;
+
+public class Event
 {
-    internal class Event
-    {
-    }
+    public string Id { get; set; } = null!;
+    public string? Image { get; set; }
+    public string? Title { get; set; }
+
+    public DateTime EventDate { get; set; }
+
+
+    public string? Location { get; set; }
+
+    public string? Description { get; set; }
 }
